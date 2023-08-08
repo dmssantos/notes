@@ -39,7 +39,6 @@ export default function NoteForm({ onSubmit, onAddTag, availableTags, title = ""
               <Form.Control ref={titleRef} required defaultValue={title} />
             </Form.Group>
           </Col>
-
           <Col>
             <Form.Group controlId="tags">
               <Form.Label>Tags</Form.Label>

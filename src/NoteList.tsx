@@ -1,14 +1,5 @@
+import { Badge, Button, Card, Col, Form, Modal, Row, Stack, } from "react-bootstrap"
 import { useMemo, useState } from "react"
-import {
-  Badge,
-  Button,
-  Card,
-  Col,
-  Form,
-  Modal,
-  Row,
-  Stack,
-} from "react-bootstrap"
 import { Link } from "react-router-dom"
 import ReactSelect from "react-select"
 import { Tag } from "./App"
@@ -35,12 +26,7 @@ type EditTagsModalProps = {
   onUpdateTag: (id: string, label: string) => void
 }
 
-export function NoteList({
-  availableTags,
-  notes,
-  onUpdateTag,
-  onDeleteTag,
-}: NoteListProps) {
+export function NoteList({ availableTags, notes, onUpdateTag, onDeleteTag, }: NoteListProps) {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   const [title, setTitle] = useState("")
   const [editTagsModalIsOpen, setEditTagsModalIsOpen] = useState(false)
@@ -163,13 +149,7 @@ function NoteCard({ id, title, tags }: SimplifiedNote) {
   )
 }
 
-function EditTagsModal({
-  availableTags,
-  handleClose,
-  show,
-  onDeleteTag,
-  onUpdateTag,
-}: EditTagsModalProps) {
+function EditTagsModal({ availableTags, handleClose, show, onDeleteTag, onUpdateTag, }: EditTagsModalProps) {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
